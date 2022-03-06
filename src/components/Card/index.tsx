@@ -4,6 +4,8 @@ type Props = {
     description: string;
     action?: MouseEventHandler<HTMLButtonElement> | any;
     actionLabel?: string;
+    additionalAction?: MouseEventHandler<HTMLButtonElement> | any;
+    additionalActionLabel?: string
 }
 
 import {
@@ -18,7 +20,9 @@ export const Card: React.FC<Props> = ({
     title,
     description,
     action, 
-    actionLabel
+    actionLabel, 
+    additionalAction, 
+    additionalActionLabel
 }: Props) => (
     <CardContainer>
         <CardContent>
@@ -34,6 +38,12 @@ export const Card: React.FC<Props> = ({
                  onClick={action}
                 >
                     {actionLabel}
+                </CardButton>
+                <CardButton
+                 type="button"
+                 onClick={additionalAction}
+                >
+                    {additionalActionLabel}
                 </CardButton>
             </CardFooter>
         </CardContent>

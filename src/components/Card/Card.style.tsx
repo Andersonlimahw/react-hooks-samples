@@ -33,6 +33,7 @@ export const CardButton = styled.button`
     font-size: 1.5rem;
     line-height: 1.8rem;
     transition: all 0.5s ease-in;
+    margin: 8px;
 
     &:hover {
         border: 2px solid #333;

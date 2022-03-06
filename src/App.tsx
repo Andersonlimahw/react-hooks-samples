@@ -5,6 +5,7 @@ import { UseEffectSample } from './hooks/useEffectSample';
 import { UseContextSample } from './hooks/useContextSample';
 import { useState, useEffect } from 'react';
 import { UserProvider } from './contexts/UserContext';
+import { UseReducerSample } from './hooks/useReducerSample';
 
 const defaultUserData =  {
   name: 'Anderson Lima',
@@ -23,12 +24,15 @@ function App() {
       <main className='app_main'>
         <UseStateSample /> 
         <UseEffectSample />       
+
         <UserProvider value={{
           userData,
           setUserData
         }}>
           <UseContextSample />
         </UserProvider>
+
+        <UseReducerSample />
       </main>
     </div>
   )
