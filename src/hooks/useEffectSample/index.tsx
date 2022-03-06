@@ -25,6 +25,7 @@ export const UseEffectSample : React.FC = () => {
             <Card
                 title={title}
                 description='Watching State'
+                path="useEffectSample"
                 action={()=> setTitle((prevState) => `${prevState}, effect`)}
                 actionLabel="Update Title"
             />

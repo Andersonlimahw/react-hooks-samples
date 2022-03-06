@@ -10,6 +10,7 @@ export const UseContextSample : React.FC = () => {
                <Card
                     title={userData.name}
                     description={userData.email}
+                    path="useContextSample"
                     action={() => setUserData({
                         name: 'Context',
                         email: 'context@contex.com'

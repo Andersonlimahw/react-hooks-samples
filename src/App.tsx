@@ -3,9 +3,10 @@ import './App.css'
 import { UseStateSample } from './hooks/useStateSample/index';
 import { UseEffectSample } from './hooks/useEffectSample';
 import { UseContextSample } from './hooks/useContextSample';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { UserProvider } from './contexts/UserContext';
 import { UseReducerSample } from './hooks/useReducerSample';
+import { UseCallBackSample } from './hooks/useCallBackSample';
 
 const defaultUserData =  {
   name: 'Anderson Lima',
@@ -33,6 +34,7 @@ function App() {
         </UserProvider>
 
         <UseReducerSample />
+        <UseCallBackSample />
       </main>
     </div>
   )

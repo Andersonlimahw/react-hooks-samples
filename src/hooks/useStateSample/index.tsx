@@ -9,6 +9,7 @@ export const UseStateSample : React.FC = () => {
             <Card
                 title={title}
                 description='Updating State'
+                path="useStateSample"
                 action={()=> setTitle('Use State')}
                 actionLabel="Update Title"
             />

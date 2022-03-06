@@ -25,6 +25,7 @@ export const UseReducerSample : React.FC = () => {
             <Card
                 title="React.useReducer"
                 description={`Counter: ${state.counter} | Clicks: ${state.clicks}`}
+                path="useReducerSample"
                 action={increment}
                 actionLabel="+"
                 additionalAction={decrement}

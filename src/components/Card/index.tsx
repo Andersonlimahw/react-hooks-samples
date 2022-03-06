@@ -2,6 +2,7 @@ import { MouseEventHandler } from 'react';
 type Props = {
     title: string;
     description: string;
+    path: string;
     action?: MouseEventHandler<HTMLButtonElement> | any;
     actionLabel?: string;
     additionalAction?: MouseEventHandler<HTMLButtonElement> | any;
@@ -13,12 +14,14 @@ import {
     CardContent,
     CardTitle,
     CardDescription,
+    CardPath,
     CardFooter, 
     CardButton
 } from './Card.style';
 export const Card: React.FC<Props> = ({
     title,
     description,
+    path,
     action, 
     actionLabel, 
     additionalAction, 
@@ -32,19 +35,32 @@ export const Card: React.FC<Props> = ({
             <CardDescription>
                 {description}
             </CardDescription>
+            <CardPath>
+                Path: src/hooks/{path}
+            </CardPath>
             <CardFooter>
-                <CardButton
-                 type="button"
-                 onClick={action}
-                >
-                    {actionLabel}
-                </CardButton>
-                <CardButton
-                 type="button"
-                 onClick={additionalAction}
-                >
-                    {additionalActionLabel}
-                </CardButton>
+                {
+                    action && actionLabel && (
+                        <CardButton
+                        type="button"
+                        onClick={action}
+                       >
+                           {actionLabel}
+                       </CardButton>
+                    )
+                }
+               
+               {
+                    additionalAction && additionalActionLabel && (
+                        <CardButton
+                        type="button"
+                        onClick={additionalAction}
+                       >
+                           {additionalActionLabel}
+                       </CardButton>
+                    )
+                }
+                
             </CardFooter>
         </CardContent>
     </CardContainer>
