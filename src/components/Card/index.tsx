@@ -1,12 +1,12 @@
 import { MouseEventHandler } from 'react';
 type Props = {
     title: string;
-    description: string;
+    description: string | any;
     path: string;
     action?: MouseEventHandler<HTMLButtonElement> | any;
     actionLabel?: string;
     additionalAction?: MouseEventHandler<HTMLButtonElement> | any;
-    additionalActionLabel?: string
+    additionalActionLabel?: string,
 }
 
 import {

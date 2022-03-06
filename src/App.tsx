@@ -7,6 +7,8 @@ import { useState } from 'react';
 import { UserProvider } from './contexts/UserContext';
 import { UseReducerSample } from './hooks/useReducerSample';
 import { UseCallBackSample } from './hooks/useCallBackSample';
+import { UseMemoSample } from './hooks/useMemoSample';
+import { UseRefSample } from './hooks/useRefSample';
 
 const defaultUserData =  {
   name: 'Anderson Lima',
@@ -35,6 +37,8 @@ function App() {
 
         <UseReducerSample />
         <UseCallBackSample />
+        <UseMemoSample />
+        <UseRefSample />
       </main>
     </div>
   )
