@@ -45,9 +45,9 @@ export const UseImperativeHandleSample : React.FC = () => {
                 />
                 <Form ref={formRef}/>
                 <Card
-                    title="React.useImperativeHandle"
+                    title="React.handle"
                     description={description}
-                    path="UseFwdRefSample"
+                    path="useImperativeHandle"
                     action={handleSubmit}
                     actionLabel="print"
                 />

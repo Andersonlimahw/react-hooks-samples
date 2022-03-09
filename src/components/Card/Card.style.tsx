@@ -12,6 +12,11 @@ export const CardContainer = styled.div`
     box-shadow: 4px 8px 4px #004355;
     background: #f1f1f1;
     margin: 16px;
+    width: 300px;
+
+    @media (max-width: 767) {
+        width: 100%;
+    }
 `;
 
 export const CardContent = styled.div`
