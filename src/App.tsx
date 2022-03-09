@@ -11,6 +11,7 @@ import { UseMemoSample } from './hooks/useMemoSample';
 import { UseRefSample } from './hooks/useRefSample';
 import { UseImperativeHandleSample } from './hooks/useImperativeHandleSample';
 import { UseCustomHookSample } from './hooks/useCustomHook';
+import { UseDebugValueSample } from './hooks/useDebugValueSample';
 
 const defaultUserData =  {
   name: 'Anderson Lima',
@@ -40,7 +41,14 @@ function App() {
         <UseReducerSample />
         <UseCallBackSample />
         <UseMemoSample />
-        <UseCustomHookSample />
+        <UseCustomHookSample 
+          userName='Andersonlimahw'
+        />
+        <UseCustomHookSample 
+          userName='akitaonrails'
+        />
+        <UseDebugValueSample />
+        
         <UseRefSample />
         <UseImperativeHandleSample />
         

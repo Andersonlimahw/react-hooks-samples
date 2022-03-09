@@ -1,12 +1,9 @@
 import React from 'react';
 import { Card } from '../../components/Card/index';
-import { useCustomRequestHook, ResponseType } from './useCustomRequestHook';
+import { useFetchWithDebugHook, ResponseType } from './useCustomRequestHook';
 
-type Props = {
-    userName: string
-};
-export const UseCustomHookSample : React.FC<Props> = ({ userName } : Props) => {
-    const [statusType, response] = useCustomRequestHook({url: `https://api.github.com/users/${userName}`});
+export const UseDebugValueSample : React.FC = () => {
+    const [statusType, response] = useFetchWithDebugHook({url: 'https://api.github.com/users/maateusilva'});
     const renderGitInformation = () => (`Name: ${response.name}, Bio: ${response.bio}`);
     const renderForm = () => {
         switch(statusType) {
