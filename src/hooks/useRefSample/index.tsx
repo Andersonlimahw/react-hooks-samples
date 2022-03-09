@@ -9,8 +9,9 @@ export const UseRefSample : React.FC = () => {
     function handlePrintName() {
         console.log('inputRef', inputRef);
         if(inputRef && inputRef.current){
-            alert(inputRef.current.value)
-            setDescription(`Valor atualizado: ${inputRef.current.value}`);
+            const currenRef = inputRef.current as any;
+            alert(currenRef.value)
+            setDescription(`Valor atualizado: ${currenRef.value}`);
         }
     }
 

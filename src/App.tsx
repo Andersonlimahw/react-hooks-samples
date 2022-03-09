@@ -9,6 +9,7 @@ import { UseReducerSample } from './hooks/useReducerSample';
 import { UseCallBackSample } from './hooks/useCallBackSample';
 import { UseMemoSample } from './hooks/useMemoSample';
 import { UseRefSample } from './hooks/useRefSample';
+import { UseImperativeHandleSample } from './hooks/useImperativeHandleSample';
 
 const defaultUserData =  {
   name: 'Anderson Lima',
@@ -39,6 +40,7 @@ function App() {
         <UseCallBackSample />
         <UseMemoSample />
         <UseRefSample />
+        <UseImperativeHandleSample />
       </main>
     </div>
   )
